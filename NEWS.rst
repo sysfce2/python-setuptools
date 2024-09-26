@@ -1,3 +1,79 @@
+v75.1.0
+=======
+
+Features
+--------
+
+- Deprecated ``bdist_wheel.universal`` configuration. (#4617)
+
+
+Bugfixes
+--------
+
+- Removed reference to upload_docs module in entry points. (#4650)
+
+
+v75.0.0
+=======
+
+Features
+--------
+
+- Declare also the dependencies used by distutils (adds jaraco.collections).
+
+
+Deprecations and Removals
+-------------------------
+
+- Removed upload_docs command. (#2971)
+- Merge with pypa/distutils@7283751. Removed the register and upload commands and the config module that backs them (pypa/distutils#294). Removed the borland compiler. Replaced vendored dependencies with natural dependencies. Cygwin C compiler now gets compilers from sysconfig (pypa/distutils#296). (#4649)
+
+
+v74.1.3
+=======
+
+Bugfixes
+--------
+
+- Fix cross-platform compilation using ``distutils._msvccompiler.MSVCCompiler`` -- by :user:`saschanaz` and :user:`Avasam` (#4648)
+
+
+v74.1.2
+=======
+
+Bugfixes
+--------
+
+- Fixed TypeError in sdist filelist processing by adding support for pathlib Paths for the build_base. (#4615)
+- Removed degraded and deprecated ``test_integration`` (easy_install) from the test suite. (#4632)
+
+
+v74.1.1
+=======
+
+Bugfixes
+--------
+
+- Fixed TypeError in ``msvc.EnvironmentInfo.return_env`` when no runtime redistributables are installed. (#1902)
+
+
+v74.1.0
+=======
+
+Features
+--------
+
+- Added support for defining ``ext-modules`` via ``pyproject.toml``
+  (**EXPERIMENTAL**, may change in future releases). (#4568)
+
+
+Bugfixes
+--------
+
+- Merge with pypa/distutils@3dcdf8567, removing the duplicate vendored copy of packaging. (#4622)
+- Restored ``setuptools.msvc.Environmentinfo`` as it is used externally. (#4625)
+
+
 v74.0.0
 =======
 
